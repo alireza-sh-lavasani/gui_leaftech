@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>trees_2_1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="second trees page - automatic" />
+		<meta property="og:site_name" content="trees_2_1" />
+		<meta property="og:title" content="trees_2_1" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="second trees page - automatic" />
+		<link href="static/trees_standard/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/trees_standard/main.css" />
+		<noscript><link rel="stylesheet" href="static/trees_standard/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Automatic</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/go_to_trees_1_0" class="button n01">Back</a>
+										</li>
+									</ul>
+									<h1 id="text05">Please specify if the ratio of trunk to crown is different from the standard 0.4:</h1>
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<input type="number" name="trunk_ratio" id="form01-trunk_ratio" placeholder="Trunk Ratio" maxlength="128" data-category="decimal" step="any" min="0" max="1" value="0.4" required />
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/automatic_form">Generate Trees</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/trees_standard/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>building_1_0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="config building file" />
+		<meta property="og:site_name" content="building_1_0" />
+		<meta property="og:title" content="building_1_0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="config building file" />
+		<link href="static/building/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/building/main.css" />
+		<noscript><link rel="stylesheet" href="static/building/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Building Configuration</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/return_to_menu" class="button n01">Back to Menu</a>
+										</li>
+									</ul>
+									<p id="text05">Configure your building information:</p>
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<label for="form01-folderpath">Folder path</label>
+									<input type="text" name="folderpath" id="form01-folderpath" placeholder="e.g. G://Geteilte Ablagen//DigitalTwin//DXF-Files" maxlength="256" value="{{building_dict['folderpath']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-dxffilename">DXF file name</label>
+									<input type="text" name="dxffilename" id="form01-dxffilename" placeholder="e.g. dxffilename.dxf" maxlength="256" value="{{building_dict['dxffilename']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-clustersortingfilename">CSV file name (cluster sorting information)</label>
+									<input type="text" name="clustersortingfilename" id="form01-clustersortingfilename" placeholder="e.g. clusterfile.csv" maxlength="256" value="{{building_dict['clustersortingfilename']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-clusterinformationfilename">CSV file name (additional cluster information)</label>
+									<input type="text" name="clusterinformationfilename" id="form01-clusterinformationfilename" placeholder="e.g. clusterinformation.csv" maxlength="256" value="{{building_dict['clusterinformationfilename']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-buildingname">Building Name</label>
+									<input type="text" name="buildingname" id="form01-buildingname" placeholder="e.g. V1" maxlength="256" value="{{building_dict['buildingname']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-floorname">Floor names (formatted as list)</label>
+									<input type="text" name="floorname" id="form01-floorname" placeholder="e.g. [10,11,12]" maxlength="256" value="{{building_dict['floorname']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-floorheight">floor heights (formatted as list)</label>
+									<input type="text" name="floorheight" id="form01-floorheight" placeholder="e.g. [1.5,5.25,8.55]" maxlength="256" value="{{building_dict['floorheight']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-separator">name separator</label>
+									<select name="separator" id="form01-separator">
+										{% if building_dict['separator'] == '-' %}
+											<option value="-">- (dash)</option>
+										{% elif building_dict['separator'] == '.' %}
+											<option value=".">. (full stop)</option>
+										{% elif building_dict['separator'] == '_' %}
+											<option value="_">_ (underscore)</option>
+										{% else %}
+										    <option value="">&ndash;</option>
+										{% endif %}
+										<option value="">&ndash;</option>
+										<option value="-">- (dash)</option>
+										<option value=".">. (full stop)</option>
+										<option value="_">_ (underscore)</option>
+									</select>
+								</div>
+								<div class="field">
+									<label for="form01-layer_section_keys">Key words describing layer/grid element groups</label>
+									<input type="text" name="layer_section_keys" id="form01-layer_section_keys" placeholder="e.g. [Quadrant_]" maxlength="256" value="{{building_dict['layer_section_keys']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-layer_surface_keys">Key words describing layers for relevant entities</label>
+									<input type="text" name="layer_surface_keys" id="form01-layer_surface_keys" placeholder="e.g. [window]" maxlength="256" value="{{building_dict['layer_surface_keys']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-dxf_data_types">DFX-line data types to be screened</label>
+									<input type="text" name="dxf_data_types" id="form01-dxf_data_types" placeholder="e.g. [LWPOLYLINE,POLYLINE]" maxlength="256" value="{{building_dict['dxf_data_types']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-multiplepersection">more than one surface can be in one grid element</label>
+									<select name="multiplepersection" id="form01-multiplepersection">
+										{% if building_dict['multiplepersection'] == 'True' %}
+											<option value="True">True</option>
+										{% elif building_dict['multiplepersection'] == 'False' %}
+											<option value="False">False</option>
+										{% else %}
+										    <option value="">&ndash;</option>
+										{% endif %}
+										<option value="True">True</option>
+										<option value="False">False</option>
+									</select>
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/building_configuration">Next</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/building/main.js"></script>
+	</body>
+</html>

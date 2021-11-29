@@ -1,0 +1,32 @@
+{"Baden-Würrtemberg": {"link": "https://shop.lgl-bw.de/lvshop2/start_ns.asp?openkey=&keyinfo=lod2&os=Win32&mapw=600",
+"description": "Please follow the link to the online shop to order the data and upload it here."},
+
+"Bayern": {"link": "https://www.ldbv.bayern.de/produkte/3dprodukte/dom.html",
+"description": "Please follow the link to see the request guidelines and order the data by email at service@geodaten.bayern.de. Then upload it here."},
+
+"Bremen": {"link": "https://www.geo.bremen.de/produkte/3d-produkte-11706",
+"description": "Please follow the link to see the request guidelines and order the data by email at geodatenservice@geo.bremen.de. Then upload it here."},
+
+"Hessen": {"link": "https://hvbg.hessen.de/geoinformation/landesvermessung/geotopographie/3d-daten",
+"description": "Please follow the link to see the available geodata. Send an email containing a KML file with different layers and images of each layer to vertrieb-geobasisdaten@hvbg.hessen.de. Then upload it here."},
+
+"Mecklenburg Vorpommern": {"link": "https://fms.mv-regierung.de/formulare/form/display.do?%24context=CC9E66BD658D77CEC20E",
+"description": "Please follow the link to order the data and upload it here."},
+
+"Niedersachsen": {"link": "https://www.lgln.niedersachsen.de/startseite/geodaten_karten/3d_geobasisdaten/3d-geobasisdaten-143145.html",
+"description": "Please follow the link to order the DTM and DSM data. The GML data can be directly downloaded through an online portal. Then upload it here."},
+
+"Rheinland-Pfalz": {"link": "https://lvermgeo.rlp.de/de/geodaten-geoshop/",
+"description": "Please follow the link to see the available geodata. Send an email containing a separate KML file for each of DGM, DOM and CityGML to vertrieb-geodienste@vermkv.rlp.de. Then upload it here."},
+
+"Saarland": {"link": "https://www.shop.lvgl.saarland.de/index.php?option=com_virtuemart&view=category&virtuemart_category_id=1057&virtuemart_manufacturer_id=0&Itemid=156",
+"description": "Please follow the link to the online shop to order the data and upload it here."},
+
+"Sachsen-Anhalt": {"link": "https://www.lvermgeo.sachsen-anhalt.de/de/kostenfreie_geobasisdaten_lvermgeo.html",
+"description": "Please follow the link to the online platform to download the data and upload it here."},
+
+"Schleswig-Holstein": {"link": "https://www.schleswig-holstein.de/DE/Landesregierung/LVERMGEOSH/Service/serviceGeobasisdaten/geodatenService_Geobasisdaten_mehrLesen.html",
+"description": "Please follow the link to the online shop to order the data and upload it here."},
+
+"Thüringen": {"link": "https://www.geoportal-th.de/de-de/Downloadbereiche/Download-Offene-Geodaten-Th%C3%BCringen",
+"description": "Please follow the link to the online platform to download the data and upload it here."}}

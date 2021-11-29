@@ -1,0 +1,21 @@
+{
+  "Project Name": "25_test_flow",
+  "Address": "",
+  "Latitude": 52.510703, 
+  "Longitude": 13.416776,
+  "Reference Longitude": 15,
+  "Start Date": [
+    2020,
+    1,
+    1,
+    0,
+    0
+  ],
+  "End Date": [
+    2020,
+    12,
+    31,
+    23,
+    0
+  ]
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>setup_3_2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="kml set-up" />
+		<meta property="og:site_name" content="setup_3_2" />
+		<meta property="og:title" content="setup_3_2" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="kml set-up" />
+		<link href="static/setup_kml/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/setup_kml/main.css" />
+		<noscript><link rel="stylesheet" href="static/setup_kml/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">KML set-up</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/return_to_menu" class="button n01">Back to Menu</a>
+										</li>
+									</ul>
+									<p id="text01"><span>Please follow the steps to set up your KML file:</span><br /><br /><span><strong>1)</strong> Watch the video below to learn how to create and correctly label your KML file on Google My Maps</span></p>
+									<div id="video01" class="video">
+										<div class="frame">
+											<iframe data-src="" src="static/images/KML_video.mp4" allowfullscreen="1"></iframe>
+										</div>
+									</div>
+									<p id="text02"><strong>2)</strong> Follow <a href="https://www.google.com/intl/de_de/maps/about/mymaps/" target="blank">this link</a> to Google My Maps, create your KML file and download it</p>
+									<p id="text03">Here is a quick reminder of the naming protocol:</p>
+									<div id="table01" class="table-wrapper">
+										<div class="table-inner">
+											<table>
+												<thead>
+													<tr>
+														<th>Layer Name</th>
+														<th>Polygon Name Example</th>
+														<th>Selection</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>TargetBuilding</td>
+														<td>target_building_01</td>
+														<td>individual outline of building</td>
+													</tr>
+													<tr>
+														<td>SurroundingBuildings</td>
+														<td>surrounding_buildings_01</td>
+														<td>area incl. relevant buildings</td>
+													</tr>
+													<tr>
+														<td>Topography</td>
+														<td>terrain_01</td>
+														<td>area incl. relevant terrain</td>
+													</tr>
+													<tr>
+														<td>Vegetation</td>
+														<td>deciduous_tree_01</td>
+														<td>individual trees</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<p id="text06"><strong>3)</strong> Upload your KML file below</p>
+									{% if error == True %}
+									<p id="text05">This is not a valid KML file. Please make sure your labels are correct.</p>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<div class="file" data-placeholder="KML File" data-filename="">
+										<input type="file" name="kml_file" id="form01-kml_file" required />
+										<button tabindex="-1" type="button" id="form01-button" class="select"><svg><use xlink:href="static/setup_kml/icons.svg#folder"></use></svg></button>
+									</div>
+									<div id="file-selected"></div>
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/kml_setup">Next</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/setup_kml/main.js"></script>
+	</body>
+</html>

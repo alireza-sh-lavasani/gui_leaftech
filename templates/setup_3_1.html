@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>setup_3_1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="project configuration" />
+		<meta property="og:site_name" content="setup_3_1" />
+		<meta property="og:title" content="setup_3_1" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="project configuration" />
+		<link href="static/setup_3_1/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/setup_3_1/main.css" />
+		<noscript><link rel="stylesheet" href="static/setup_3_1/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Project Configuration</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/return_to_menu" class="button n01">Back to Menu</a>
+										</li>
+									</ul>
+									<p id="text05">Configure your project information:</p>
+								</div>
+							</div>
+						</div>
+						<p id="text02"><span><strong>PROJECT NAME</strong></span><br /><span>{{ config_dict["ProjectName"] }}</span></p>
+						<p id="text03"><span><strong>PROJECT ID</strong></span><br /><span>{{ config_dict["ProjectID"] }}</span></p>
+						<p id="text01"><span><strong>FOLDER NAME</strong></span><br /><span>{{ config_dict["FolderName"] }}</span></p>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<label for="form01-customer-name">Customer Name</label>
+									<input type="text" name="CustomerName" id="form01-customer-name" placeholder="" maxlength="256" value="{{config_dict['CustomerName']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-partner-name">Partner Name</label>
+									<input type="text" name="PartnerName" id="form01-partner-name" placeholder="" maxlength="256" value="{{config_dict['PartnerName']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-country">Country</label>
+									<select name="Country" id="form01-country">
+										<option value="{{config_dict['Country']}}" >{{config_dict['Country']}}</option>
+										<option value="Germany">Germany</option>
+									</select>
+								</div>
+								<div class="field">
+									<label for="form01-county">County</label>
+									<select name="County" id="form01-county">
+										<option value="{{config_dict['County']}}">{{config_dict['County']}}</option>
+										<option value="Baden-Württemberg">Baden-Württemberg</option>
+										<option value="Bayern">Bayern</option>
+										<option value="Berlin">Berlin</option>
+										<option value="Brandenburg">Brandenburg</option>
+										<option value="Bremen">Bremen</option>
+										<option value="Hamburg">Hamburg</option>
+										<option value="Hessen">Hessen</option>
+										<option value="Mecklenburg Vorpommern">Mecklenburg Vorpommern</option>
+										<option value="Niedersachsen">Niedersachsen</option>
+										<option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+										<option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+										<option value="Saarland">Saarland</option>
+										<option value="Sachsen">Sachsen</option>
+										<option value="Sachsen-Anwalt">Sachsen-Anwalt</option>
+										<option value="Schleswig-Holstein">Schleswig-Holstein</option>
+										<option value="Thüringen">Thüringen</option>
+									</select>
+								</div>
+								<div class="field">
+									<label>Services</label>
+									<div class="checkbox">
+										{% if config_dict['services'][0] == 'shading' or config_dict['services'][1] == 'shading' or config_dict['services'][2] == 'shading'%}
+											<input type="checkbox" name="shading" id="form01-shading" value="checked" checked/>
+										{% else %}
+											<input type="checkbox" name="shading" id="form01-shading" value="checked"/>
+										{% endif %}
+										<label for="form01-shading"><span>Shading</span></label>
+									</div>
+									<div class="checkbox">
+										{% if config_dict['services'][0] == 'solar' or config_dict['services'][1] == 'solar' or config_dict['services'][2] == 'solar'%}
+											<input type="checkbox" name="solar" id="form01-solar" value="checked" checked/>
+										{% else %}
+											<input type="checkbox" name="solar" id="form01-solar" value="checked"/>
+										{% endif %}
+										<label for="form01-solar"><span>Solar</span></label>
+									</div>
+									<div class="checkbox">
+										{% if config_dict['services'][0] == 'forecast' or config_dict['services'][1] == 'forecaset' or config_dict['services'][2] == 'forecast'%}
+											<input type="checkbox" name="forecast" id="form01-forecast" value="checked" checked/>
+										{% else %}
+											<input type="checkbox" name="forecast" id="form01-forecast" value="checked"/>
+										{% endif %}
+									<label for="form01-forecast"><span>Forecast</span></label>
+									</div>
+								</div>
+								<div class="field">
+									<label for="form01-weather-API">Weather API Use</label>
+									<select name="WeatherAPI" id="form01-weather-API">
+										{% if config_dict['WeatherAPI'] == 'on' %}
+											<option value="on">On</option>
+											<option value="">&ndash;</option>
+											<option value="off">Off</option>
+										{% elif config_dict['WeatherAPI'] == 'off' %}
+											<option value="off">Off</option>
+											<option value="">&ndash;</option>
+											<option value="on">On</option>
+										{% else %}
+										    <option value="">&ndash;</option>
+											<option value="on">On</option>
+											<option value="off">Off</option>
+										{% endif %}
+									</select>
+								</div>
+								<div class="field">
+									<label for="form01-language">Language</label>
+									<select name="Language" id="form01-language">
+										{% if config_dict['Language'] == 'german' %}
+											<option value="german">German</option>
+											<option value="">&ndash;</option>
+											<option value="english">English</option>
+										{% elif config_dict['Language'] == 'english' %}
+											<option value="english">English</option>
+											<option value="">&ndash;</option>
+											<option value="german">German</option>
+										{% else %}
+										    <option value="">&ndash;</option>
+											<option value="english">English</option>
+											<option value="german">German</option>
+										{% endif %}
+									</select>
+								</div>
+								<div class="field">
+									<label for="form01-location">Location</label>
+									<input type="text" name="Location" id="form01-location" placeholder="" maxlength="256" value="{{config_dict['Location']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-street">Street</label>
+									<input type="text" name="street" id="form01-street" placeholder="" maxlength="256" value="{{config_dict['street']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-postcode">Postcode</label>
+									<input type="number" name="postCode" id="form01-postCode" placeholder="" maxlength="128" data-category="integer" step="1" value="{{config_dict['postCode']}}"/>
+								</div>
+								<div class="field">
+									<label for="form01-city">City</label>
+									<input type="text" name="city" id="form01-city" placeholder="" maxlength="256" value="{{config_dict['city']}}"/>
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/project_configuration">Next</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/setup_3_1/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>trees_3_1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="third trees page - with image" />
+		<meta property="og:site_name" content="trees_3_1" />
+		<meta property="og:title" content="trees_3_1" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="third trees page - with image" />
+		<link href="static/trees_3_1/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/trees_3_1/main.css" />
+		<noscript><link rel="stylesheet" href="static/trees_3_1/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<div id="columns01" class="container default">
+						<div class="wrapper">
+							<div class="inner">
+								<div id="image01" class="image">
+									<img src="static/images/logo.jpg" alt="" />
+								</div>
+								<h1 id="text04">Thank you</h1>
+								<p id="text05">Your tree has been generated. Here is a preview below. Please find the STL file your project folder or click here to download it.</p>
+							</div>
+						</div>
+					</div>
+					<div id="image02" class="image" data-position="center">
+						<img src="{{ url_for('static', filename=tree_image) }}" alt="" />
+					</div>
+					<ul id="buttons01" class="buttons">
+						<li>
+							<a href="{{ url_for('get_file', filename=filepath) }}" class="button n01">Download STL</a>
+						</li><li>
+							<a href="/return" class="button n02">Create Another Tree</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="static/trees_3_1/main.js"></script>
+	</body>
+</html>

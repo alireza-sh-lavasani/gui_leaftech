@@ -1,0 +1,21 @@
+{
+	"categories": [
+		"TargetBuilding",
+		"SurroundingBuildings",
+		"Topography",
+		"PermanentVegetation",
+		"Vegetation",
+		"OtherObjects",
+		"Evergreen",
+		"missing_buildings",
+		"ground_height"
+	],
+	"category_start": "<Folder>",
+	"category_end": "</Folder>",
+	"singleObject_start": "<Placemark>",
+	"singleObject_end": "</Placemark>",
+	"ID_start": "<name>",
+	"ID_end": "</name>",
+	"polygon_start": "<coordinates>",
+	"polygon_end": "</coordinates>"
+}

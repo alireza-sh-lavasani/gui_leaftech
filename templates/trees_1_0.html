@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>trees_1_0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="first trees page" />
+		<meta property="og:site_name" content="trees_1_0" />
+		<meta property="og:title" content="trees_1_0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="first trees page" />
+		<link href="static/trees_standard/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/trees_standard/main.css" />
+		<noscript><link rel="stylesheet" href="static/trees_standard/noscript.css" /></noscript>	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Tree generation</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/return_to_menu" class="button n01">Back to Menu</a>
+										</li>
+									</ul>
+									<p id="text05"><span>There are two methods to generate your trees:</span><br /><span><strong>Manual</strong> - create trees of a certain width and height that have not already been selected on the KML</span><br /><span><strong>Automatic</strong> - generate trees automatically from the vegetation selected on the KML</span><br /><br /><span>Please indicate whether you want your tree to be manually or automatically generated:</span></p>
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<select name="method_type" id="form01-method_type" required>
+										<option value="">&ndash; Tree Generation Method &ndash;</option>
+										<option value="manual">Manual</option>
+										<option value="automatic">Automatic</option>
+									</select>
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/trees_1_0">Next</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/trees_standard/main.js"></script>
+	</body>
+</html>

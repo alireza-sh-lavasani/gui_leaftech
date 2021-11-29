@@ -1,0 +1,25 @@
+{
+	"UTMZone": 32,
+	"ZoneLetter": "U",
+	"PolygonStart": "<gml:pos srsDimension=\"3\">",
+	"PolygonEnd": "</gml:pos>",
+	"BuildingStart": "<bldg:Building",
+	"BuildingEnd": "/bldg:Building>",
+	"Elements": [
+		{
+			"ELEMENT": "WALL",
+			"ELEMENTSTART": "<bldg:WallSurface",
+			"ELEMENTEND": "</bldg:WallSurface>"
+		},
+		{
+			"ELEMENT": "ROOF",
+			"ELEMENTSTART": "<bldg:RoofSurface",
+			"ELEMENTEND": "</bldg:RoofSurface>"
+		},
+		{
+			"ELEMENT": "GROUND",
+			"ELEMENTSTART": "<bldg:GroundSurface",
+			"ELEMENTEND": "</bldg:GroundSurface>"
+		}
+	]
+}

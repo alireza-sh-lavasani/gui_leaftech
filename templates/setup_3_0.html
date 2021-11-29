@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>setup_3_0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="menu" />
+		<meta property="og:site_name" content="setup_3_0" />
+		<meta property="og:title" content="setup_3_0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="menu" />
+		<link href="static/setup_menu/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/setup_menu/main.css" />
+		<noscript><link rel="stylesheet" href="static/setup_menu/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<div id="columns01" class="container default">
+						<div class="wrapper">
+							<div class="inner">
+								<div id="image01" class="image">
+									<img src="static/images/logo.jpg" alt="" />
+								</div>
+								<h1 id="text04">{{project_name}}</h1>
+							</div>
+						</div>
+					</div>
+					<ul id="buttons01" class="style1 buttons">
+						<li>
+							<a href="/go_to_3_1" id="one" class="button n01"><svg>
+								{% if checklist[0] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Configure Project</span></a>
+						</li><li>
+							<a href="/go_to_3_2" class="button n02"><svg>
+								{% if checklist[1] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Set Up KML</span></a>
+						</li><li>
+							<a href="/go_to_geo_1_0" class="button n03"><svg>
+								{% if checklist[2] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Acquire Geodata</span></a>
+						</li><li>
+							<a href="/go_to_buildings_1_0" class="button n05"><svg>
+								{% if checklist[4] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Add Buildings</span></a>
+						</li><li>
+							<a href="/go_to_terrain_1_0" class="button n04"><svg>
+								{% if checklist[3] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Add Terrain</span></a>
+						</li><li>
+							<a href="/go_to_trees_1_0" class="button n06"><svg>
+								{% if checklist[5] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Add Vegetation</span></a>
+						</li>
+						<li>
+							<a href="/go_to_surfaces_1_0" class="button n06"><svg>
+								{% if checklist[5] == True %}
+								<use xlink:href="static/setup_menu/icons.svg#check"></use>
+								{% else %}
+								<use xlink:href="static/setup_menu/icons.svg#minus"></use>
+								{% endif %}
+							</svg><span class="label">Add surfaces</span></a>
+						</li>
+					</ul>
+					<hr id="divider01">
+					<div id="container01" class="container default">
+						<div class="wrapper">
+							<div class="inner">
+								<ul id="buttons02" class="style1 buttons">
+									<li>
+										<a href="/go_to_3_0" class="button n07">Back to Menu</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="static/setup_menu/main.js"></script>
+	</body>
+</html>

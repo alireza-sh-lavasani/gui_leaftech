@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>geo_1_0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="geodata acquisition - for download" />
+		<meta property="og:site_name" content="geo_1_0" />
+		<meta property="og:title" content="geo_1_0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="geodata acquisition - for download" />
+		<link href="static/geo_1_0/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/geo_1_0/main.css" />
+		<noscript><link rel="stylesheet" href="static/geo_1_0/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Geodata acquisition</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/return_to_menu" class="button n01">Back to Menu</a>
+										</li>
+									</ul>
+									<p id="text01"><span>For your selected county, <strong>{{ county }}</strong>, it is possible to automatically download the relevant data. The below list indicates (with a check) which data has already been downloaded.</span><br /><br /><span><strong>The download process could take up to a minute. Please do not leave this page.</strong></span></p>
+								</div>
+							</div>
+						</div>
+						<div id="container01" class="container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<ul id="icons01" class="icons">
+											<li>
+												<a class="n01">
+													{% if checklist[0] == 0 %}
+													<svg><use xlink:href="static/geo_1_0/icons.svg#minus"></use></svg>
+													{% else %}
+													<svg><use xlink:href="static/geo_1_0/icons.svg#check"></use></svg>
+													{% endif %}
+													<span class="label">Check</span>
+												</a>
+											</li>
+										</ul>
+										<ul id="icons02" class="icons">
+											<li>
+												<a class="n01">
+													{% if checklist[1] == 0 %}
+													<svg><use xlink:href="static/geo_1_0/icons.svg#minus"></use></svg>
+													{% else %}
+													<svg><use xlink:href="static/geo_1_0/icons.svg#check"></use></svg>
+													{% endif %}
+													<span class="label">Minus</span>
+												</a>
+											</li>
+										</ul>
+										<ul id="icons03" class="icons">
+											<li>
+												<a class="n01">
+													{% if checklist[2] == 0 %}
+													<svg><use xlink:href="static/geo_1_0/icons.svg#minus"></use></svg>
+													{% else %}
+													<svg><use xlink:href="static/geo_1_0/icons.svg#check"></use></svg>
+													{% endif %}
+													<span class="label">Check</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div>
+										<p id="text02">DSM</p>
+										<p id="text03">DTM</p>
+										<p id="text05">CityGML</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul id="buttons02" class="buttons" onclick="changeText()">
+							<li>
+								<a href="/acquire_geodata_download" class="button n01" id="download-files-btn">Download Files</a>
+							</li>
+						</ul>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+    <script>
+      function changeText() {
+        document.querySelector('#download-files-btn').innerHTML = 'Downloading ...'
+      }
+    </script>
+		<script src="static/geo_1_0/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>trees_2_0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="second trees page - manual" />
+		<meta property="og:site_name" content="trees_2_0" />
+		<meta property="og:title" content="trees_2_0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="second trees page - manual" />
+		<link href="static/trees_standard/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/trees_standard/main.css" />
+		<noscript><link rel="stylesheet" href="static/trees_standard/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">manual</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/go_to_trees_1_0" class="button n01">BACK</a>
+										</li>
+									</ul>
+									<p id="text05">Select the type of tree:</p>
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<select name="tree_type" id="form01-tree_type" required>
+										<option value="" selected data-default>Tree type</option>
+										{% for tree in tree_list %}
+											<option value={{tree}}>{{tree}}</option>
+										{% endfor %}
+									</select>
+
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/manual_form">Next</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/trees_standard/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>project selection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="select project or enter new one" />
+		<meta property="og:site_name" content="project selection" />
+		<meta property="og:title" content="project selection" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="select project or enter new one" />
+		<link href="static/setup_error_message/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/setup_error_message/main.css" />
+		<noscript><link rel="stylesheet" href="static/setup_error_message/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Project selection</h1>
+									<p id="text01">Please select your project, or select &quot;New Project&quot; in the drop-down menu and enter the name of your new project:</p>
+									{% if error == True %}
+									<p id="text05">This project name is invalid. Please choose another.</p>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<select name="form_project_name" id="form_project_name" required>
+										<option value="" selected data-default>Select your project</option>
+										<option value="new_project">New Project</option>
+										{% for project in project_list %}
+											<option value={{project}}>{{project}}</option>
+										{% endfor %}
+									</select>
+								</div>
+								<div class="field">
+									<input type="text" name="new_project_name" id="new_project_name" placeholder="New Project Name" maxlength="256" optional/>
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/project_selection">Submit</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/setup_error_message/main.js"></script>
+	</body>
+</html>

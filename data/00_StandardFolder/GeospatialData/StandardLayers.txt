@@ -1,0 +1,28 @@
+StandardLayers on google mymaps
+
+https://www.google.de/intl/de/maps/about/mymaps/
+
+TargetBuilding
+-TargetBuilding_1
+-TargetBuilding_2
+- [...]
+
+SurroundingBuildings
+-SurroundingBuildingArea_1
+-SurroundingBuildingArea_2
+- [...]
+
+Topography
+-Topography_1
+-Topography_2
+- [...]
+
+Vegetation
+-TreeGroup_1
+-TreeGroup_2
+-[...]
+
+OtherObjects
+-Object_1
+-Object_2
+-[...]

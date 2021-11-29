@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>geo_1_1</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="geodata acquisition - for link" />
+		<meta property="og:site_name" content="geo_1_1" />
+		<meta property="og:title" content="geo_1_1" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="geodata acquisition - for link" />
+		<link href="static/geo_1_1/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/geo_1_1/main.css" />
+		<noscript><link rel="stylesheet" href="static/geo_1_1/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">Geodata acquisition</h1>
+									<ul id="buttons01" class="buttons">
+										<li>
+											<a href="/return_to_menu" class="button n01">Back to Menu</a>
+										</li>
+									</ul>
+									<p id="text01"><span>For your selected county, <strong>{{ county }}</strong>, it is not possible to automatically download the relevant data.</span><br /><br /><span>{{ geo_info["description"] }}</span><br /><br /><span>A check by the file upload indicates that a file of this kind has already been uploaded in the system.</span></p>
+								</div>
+							</div>
+						</div>
+						<ul id="links01" class="links">
+							<li>
+								<a class="n01" href={{geo_info["link"]}} target="blank">LINK TO ACQUIRE GEODATA</a>
+							</li>
+						</ul>
+						<div id="container01" class="container columns">
+							<div class="wrapper">
+								<div class="inner">
+									<div>
+										<ul id="icons01" class="icons">
+											<li>
+												<a class="n01">
+													{% if checklist[0] == 0 %}
+													<svg><use xlink:href="static/geo_1_1/icons.svg#minus"></use></svg>
+													{% else %}
+													<svg><use xlink:href="static/geo_1_1/icons.svg#check"></use></svg>
+													{% endif %}
+													<span class="label">Check</span>
+												</a>
+											</li>
+										</ul>
+										<ul id="icons02" class="icons">
+											<li>
+												<a class="n01">
+													{% if checklist[1] == 0 %}
+													<svg><use xlink:href="static/geo_1_1/icons.svg#minus"></use></svg>
+													{% else %}
+													<svg><use xlink:href="static/geo_1_1/icons.svg#check"></use></svg>
+													{% endif %}
+													<span class="label">Minus</span>
+												</a>
+											</li>
+										</ul>
+										<ul id="icons03" class="icons">
+											<li>
+												<a class="n01">
+													{% if checklist[2] == 0 %}
+													<svg><use xlink:href="static/geo_1_1/icons.svg#minus"></use></svg>
+													{% else %}
+													<svg><use xlink:href="static/geo_1_1/icons.svg#check"></use></svg>
+													{% endif %}
+													<span class="label">Check</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div class="before-spacer">
+										<form enctype="multipart/form-data" id="form01" method="post" action="">
+											<div class="inner">
+												<div class="field">
+													<div class="file" data-placeholder="DSM" data-filename="">
+														<input type="file" accept="image/jpeg, image/jpg, image/gif, image/png" name="dsm" id="form01-dsm" required />
+														<button tabindex="-1" type="button" class="select"><svg><use xlink:href="static/geo_1_1/icons.svg#folder"></use></svg></button>
+													</div>
+												</div>
+												<div class="field">
+													<div class="file" data-placeholder="DTM" data-filename="">
+														<input type="file" accept="image/jpeg, image/jpg, image/gif, image/png" name="dtm" id="form01-dtm" required />
+														<button tabindex="-1" type="button" class="select"><svg><use xlink:href="static/geo_1_1/icons.svg#folder"></use></svg></button>
+													</div>
+												</div>
+												<div class="field">
+													<div class="file" data-placeholder="GML" data-filename="">
+														<input type="file" accept="image/jpeg, image/jpg, image/gif, image/png" name="gml" id="form01-gml" required />
+														<button tabindex="-1" type="button" class="select"><svg><use xlink:href="static/geo_1_1/icons.svg#folder"></use></svg></button>
+													</div>
+												</div>
+												<div class="actions">
+													<button type="submit">Next</button>
+												</div>
+											</div>
+										</form>
+									</div>
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/geo_1_1/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>setup_1_0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<meta name="description" content="login page" />
+		<meta property="og:site_name" content="setup_1_0" />
+		<meta property="og:title" content="setup_1_0" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="login page" />
+		<link href="static/setup_error_message/main.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="static/setup_error_message/main.css" />
+		<noscript><link rel="stylesheet" href="static/setup_error_message/noscript.css" /></noscript>
+	</head>
+	<body class="is-loading">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<section id="home-section">
+						<div id="columns01" class="container default">
+							<div class="wrapper">
+								<div class="inner">
+									<div id="image01" class="image">
+										<img src="static/images/logo.jpg" alt="" />
+									</div>
+									<h1 id="text04">welcome</h1>
+									<p id="text01">Please select your environment and enter your login details:</p>
+									{% if error == True %}
+									<p id="text05">Username and password not recognised</p>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						<form enctype="multipart/form-data" id="form01" method="post" action="">
+							<div class="inner">
+								<div class="field">
+									<select name="environment_selection" id="form01-environment_selection" required>
+										<option value="" selected data-default>Select the environment</option>
+										<option value="https://leaftech-api.dev1.secu-ring.de/api/">Development</option>
+										<option value="https://leaftech-api-rc.dev1.secu-ring.de/api/">Release</option>
+										<option value="https://api.apps.leaftech.eu/api/">Live</option>
+									</select>
+								</div>
+								<div class="field">
+									<input type="text" name="username" id="form01-username" placeholder="Username" maxlength="256" required />
+								</div>
+								<div class="field">
+									<input type="password" name="password" id="form01-password" placeholder="Password" maxlength="256" required />
+								</div>
+								<div class="actions">
+									<button type="submit" formaction="/login_page">Submit</button>
+								</div>
+							</div>
+						</form>
+					</section>
+					<section id="done-section"></section>
+				</div>
+			</div>
+		</div>
+		<script src="static/setup_error_message/main.js"></script>
+	</body>
+</html>
